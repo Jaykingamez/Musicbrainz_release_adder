@@ -10,9 +10,9 @@ def login(browser):
     login_click = browser.find_element_by_link_text('Log In')
     login_click.click()
     username = browser.find_element_by_id('id-username')
-    username.send_keys('Jaykin')
+    username.send_keys('')
     password = browser.find_element_by_id('id-password')
-    password.send_keys('Hacker123')
+    password.send_keys('')
     password.send_keys(Keys.ENTER)
 
 
@@ -133,7 +133,7 @@ def edit_note(browser):
 
 
 if __name__ == "__main__" :
-    browser = webdriver.Chrome('D:\\chromedriver_win32\\chromedriver.exe')
+    browser = webdriver.Chrome('')
     browser.get('https://musicbrainz.org/')
     login(browser)
     add_release(browser)
